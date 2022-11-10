@@ -399,43 +399,43 @@
 
 // foreach --> doesn't return new array...
 
-const characters = [
-  {
-    fullname: "Senjougahara Hitagi",
-    age: 17,
-    oddity: "crab",
-    id: 1,
-    popularity: 100,
-  },
-  {
-    fullname: "Kanbaru Suruga",
-    age: 16,
-    oddity: "monkey",
-    id: 2,
-    popularity: 80,
-  },
-  {
-    fullname: "Sengoku Nadeko",
-    age: 14,
-    oddity: "snake",
-    id: 3,
-    popularity: 60,
-  },
-  {
-    fullname: "Oshino Shinobu",
-    age: 2000,
-    oddity: "vampire",
-    id: 4,
-    popularity: 200,
-  },
-  {
-    fullname: "Hachikuji Mayoi",
-    age: 18,
-    oddity: "snail",
-    id: 5,
-    popularity: 150,
-  },
-];
+// const characters = [
+//   {
+//     fullname: "Senjougahara Hitagi",
+//     age: 17,
+//     oddity: "crab",
+//     id: 1,
+//     popularity: 100,
+//   },
+//   {
+//     fullname: "Kanbaru Suruga",
+//     age: 16,
+//     oddity: "monkey",
+//     id: 2,
+//     popularity: 80,
+//   },
+//   {
+//     fullname: "Sengoku Nadeko",
+//     age: 14,
+//     oddity: "snake",
+//     id: 3,
+//     popularity: 60,
+//   },
+//   {
+//     fullname: "Oshino Shinobu",
+//     age: 2000,
+//     oddity: "vampire",
+//     id: 4,
+//     popularity: 200,
+//   },
+//   {
+//     fullname: "Hachikuji Mayoi",
+//     age: 18,
+//     oddity: "snail",
+//     id: 5,
+//     popularity: 150,
+//   },
+// ];
 
 // // separate pass function
 // // function showCharacter(character) {
@@ -541,45 +541,45 @@ const characters = [
 
 // ----------- Date
 
-const months = [
-  "January",
-  "February",
-  "March",
-  "April",
-  "May",
-  "June",
-  "July",
-  "August",
-  "September",
-  "October",
-  "November",
-  "December",
-];
-const days = [
-  "Sunday",
-  "Monday",
-  "Tuesday",
-  "Wednesday",
-  "Thursday",
-  "Friday",
-  "Saturday",
-];
-const date = new Date("1/1/2000");
+// const months = [
+//   "January",
+//   "February",
+//   "March",
+//   "April",
+//   "May",
+//   "June",
+//   "July",
+//   "August",
+//   "September",
+//   "October",
+//   "November",
+//   "December",
+// ];
+// const days = [
+//   "Sunday",
+//   "Monday",
+//   "Tuesday",
+//   "Wednesday",
+//   "Thursday",
+//   "Friday",
+//   "Saturday",
+// ];
+// const date = new Date("1/1/2000");
 
-console.log(date);
+// console.log(date);
 
-const month = date.getMonth();
-console.log(months[month]);
+// const month = date.getMonth();
+// console.log(months[month]);
 
-const day = date.getDay();
-console.log(days[day]);
+// const day = date.getDay();
+// console.log(days[day]);
 
-console.log(date.getDate());
-console.log(date.getFullYear());
+// console.log(date.getDate());
+// console.log(date.getFullYear());
 
-const currentDate = `${days[day]}, ${date.getDate()} ${
-  months[month]
-} ${date.getFullYear()}`;
-console.log(currentDate);
+// const currentDate = `${days[day]}, ${date.getDate()} ${
+//   months[month]
+// } ${date.getFullYear()}`;
+// console.log(currentDate);
 
-document.body.innerHTML = currentDate + " was my birthday...";
+// document.body.innerHTML = currentDate + " was my birthday...";
