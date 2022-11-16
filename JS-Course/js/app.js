@@ -192,6 +192,18 @@
 // console.log(text.slice(0, -1));
 // console.log(text.slice(-6));
 
+// console.log(text.replaceAll("i", "o"));
+
+// var str = "javablog";
+// var chr = "y";
+// var pos = str.indexOf("a");
+// console.log(pos);
+// // Add character 2 at position 4 in str
+
+// var output = [str.slice(0, pos + 1), chr, str.slice(pos)].join("");
+// console.log(output);
+// console.log(typeof output);
+
 // -----------------------------Template Literals --------------------------- //
 
 // const name = "Kaiki Deishuu";

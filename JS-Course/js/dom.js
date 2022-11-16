@@ -222,17 +222,71 @@
 
 // ----------------------------------- prepend() & innerText() ------------------------------- //
 
-const heading = document.createElement("h2");
-heading.innerText = "Monogatari Reference ";
-document.body.prepend(heading);
+// const heading = document.createElement("h2");
+// heading.innerText = "Monogatari Reference ";
+// document.body.prepend(heading);
 
 // ----------------------------------- remove() & removeChild() ------------------------------ //
 
-const toRemove = document.querySelector("h2");
-toRemove.remove();
+// const toRemove = document.querySelector("h2");
+// toRemove.remove();
 
-const title = document.querySelector("#title-div");
+// const title = document.querySelector("#title-div");
 
-const heading2 = title.querySelector(".gahara");
+// const heading2 = title.querySelector(".gahara");
 
-title.removeChild(heading2);
+// title.removeChild(heading2);
+
+// ----------------------------- innerText vs textContent() ----------------------------------- //
+
+// const list = document.getElementById("ichi");
+// const div = document.getElementById("ni");
+// const li = document.querySelector(".ichimonogatari");
+
+// console.log(div.textContent);
+// console.log(div.innerHTML);
+// console.log(list.innerHTML);
+// console.log(list.textContent);
+
+// const ul = document.createElement("ul");
+// ul.innerHTML = `${list.innerHTML}`;
+// console.log("My new ul list: \n" + ul.innerHTML);
+
+// const idScript = document.getElementById("script-id");
+// document.body.insertBefore(ul, idScript);
+// console.log(document.body.innerHTML);
+
+// ----------------------------------- CSS ---------------------------------------- //
+
+// const random = document.querySelector("#ni");
+
+// // random.style.backgroundColor = "red";
+// // random.style.color = "yellow";
+
+// random.classList.add("colors");
+
+// ------------------------------------ Events ------------------------------------ //
+
+const btn = document.querySelector(".btn");
+const heading = document.querySelector("h1");
+
+function changeColors() {
+  let hasClass = heading.classList.contains("colors");
+  if (hasClass) {
+    heading.classList.remove("text2");
+  } else {
+    heading.classList.add("text2");
+  }
+}
+
+// btn.addEventListener("click", changeColors);
+
+btn.addEventListener("click", () => {
+  const myString = document.getElementById("tongueTwister");
+
+  let regEx = /na/gi;
+  let newString = myString.textContent.replace(regEx, "nya");
+  newString = newString.charAt(0).toUpperCase() + newString.slice(1);
+  console.log(newString);
+  myString.textContent = newString;
+});
