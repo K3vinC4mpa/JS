@@ -267,26 +267,218 @@
 
 // ------------------------------------ Events ------------------------------------ //
 
-const btn = document.querySelector(".btn");
-const heading = document.querySelector("h1");
+// const btn = document.querySelector(".btn");
+// const heading = document.querySelector("h1");
 
-function changeColors() {
-  let hasClass = heading.classList.contains("colors");
-  if (hasClass) {
-    heading.classList.remove("text2");
-  } else {
-    heading.classList.add("text2");
-  }
+// function changeColors() {
+//   let hasClass = heading.classList.contains("colors");
+//   if (hasClass) {
+//     heading.classList.remove("text2");
+//   } else {
+//     heading.classList.add("text2");
+//   }
+// }
+
+// // btn.addEventListener("click", changeColors);
+
+// btn.addEventListener("click", () => {
+//   const myString = document.getElementById("tongueTwister");
+
+//   let regEx = /na/gi;
+//   let newString = myString.textContent.replace(regEx, "nya");
+//   newString = newString.charAt(0).toUpperCase() + newString.slice(1);
+//   console.log(newString);
+//   myString.textContent = newString;
+// });
+
+// -------------------------- mouse events -------------------------- //
+
+// const heading = document.getElementsByName("h1");
+// const btn = document.querySelector(".btn");
+
+// btn.addEventListener("click", () => {
+//   console.log("Clicked");
+// });
+// btn.addEventListener("mousedown", () => {
+//   console.log("mouse down");
+// });
+// btn.addEventListener("mouseup", () => {
+//   console.log("mouse up");
+// });
+// heading[0].addEventListener("mouseenter", () => {
+//   heading.forEach((i) => {
+//     i.classList.add("colors");
+//   });
+//   // heading[0].classList.add("text2", "colors");
+// });
+// heading[0].addEventListener("mouseleave", () => {
+//   heading.forEach((i) => {
+//     i.classList.remove("colors");
+//   });
+// });
+
+// ------------------------- key events -------------------------------------- //
+
+// const nameInput = document.getElementById("name");
+
+// keypress
+// nameInput.addEventListener("keypress", () => {
+//   console.log("u pressed a key");
+// });
+
+// keydown
+// nameInput.addEventListener("keydown", () => {
+//   console.log("u pressed a key down");
+// });
+
+// keyup
+// nameInput.addEventListener("keyup", () => {
+//   console.dir(nameInput.value);
+// });
+
+// ---------------------------- Event Object ---------------------------------- //
+
+// e, evt
+// info about triggered event
+
+// const heading = document.querySelector("h1");
+// const btn = document.querySelector(".btn");
+// const link = document.getElementById("link");
+
+// heading.addEventListener("click", function (e) {
+//   console.log(e.currentTarget);
+//   // console.log(e.type); // the type of event going = click,mouseenter, mouseleave, etc...
+//   console.log(this);
+//   e.currentTarget.classList.add("colors");
+// });
+// // heading.addEventListener("click", (e) => {
+// //   console.log(e.currentTarget);v
+// //   // console.log(e.type); // the type of event going = click,mouseenter, mouseleave, etc...
+// //   console.log(this);
+// //   e.currentTarget.classList.add("colors");
+// // });
+
+// function preventDefaultBehavior(e) {
+//   e.preventDefault();
+// }
+
+// link.addEventListener("click", preventDefaultBehavior);
+
+// -------------------- target vs currentTarget --------------------- //
+
+// const btns = document.querySelectorAll(".btn");
+
+// btns.forEach(function (btn) {
+//   btn.addEventListener("click", (e) => {
+//     //  console.log(e.currentTarget);
+//     //   e.currentTarget.classList.add("gahara");
+//     console.log("Target propetie: ", e.target);
+//     e.target.classList.add("gahara");
+//   });
+// });
+
+// ------------------------- propagation, bubbling & capturing ------------------ //
+
+// const container = document.querySelector(".container");
+// const list = document.querySelector(".list-items");
+
+// // bubbling ---> happens by default, if we click the deepest element it's gonna show up.
+// function showBubbling(e) {
+//   console.log("currentTarget:", e.currentTarget);
+//   // console.log("Target:", e.target);
+//   // if (e.target.classList.contains("link")) {
+//   //   console.log("You clicked on the link");
+//   // }
+// }
+
+// function stopPropagation(e) {
+//   console.log("You clicked list");
+//   e.stopPropagation();
+// }
+
+// list.addEventListener("click", showBubbling, { capture: true });
+// container.addEventListener("click", showBubbling), { capture: true };
+// document.addEventListener("click", showBubbling, { capture: true });
+// window.addEventListener("click", showBubbling, { capture: true });
+
+// ----------------- select dynamic elements
+
+// const container = document.querySelector(".container");
+// const btn = document.querySelector(".btn");
+// // const heading = document.querySelector(".heading");
+
+// function sayHellou(e) {
+//   console.log("Hellou there...");
+// }
+// // heading.addEventListener("click", sayHellou);
+
+// btn.addEventListener("click", () => {
+//   const element = document.createElement("h1");
+//   element.classList.add("gahara", "text2");
+//   element.textContent = `I'm inside the container`;
+//   container.appendChild(element);
+// });
+
+// container.addEventListener("click", (e) => {
+//   console.log(e.target);
+//   console.log(e.currentTarget);
+//   if (e.target.classList.contains("gahara", "text2")) {
+//     console.log("Hellow buddy....");
+//   }
+// });
+
+// ---------------------- submit event listener , prevent default & how get value ------------------------------- //
+
+// const form = document.getElementById("form");
+// const name = document.getElementById("name");
+// const password = document.getElementById("password");
+
+// form.addEventListener("submit", (e) => {
+//   e.preventDefault();
+//   console.log("Form submitted");
+//   console.log(name.value);
+//   console.log(password.value);
+// });
+
+// ----------------------- Web Storage API --------------------------- //
+// sessionStorage, localStorage,
+// methods are: setItem, getItem, removeItem, clear
+
+// localStorage.setItem("name", "Kaiki");
+// sessionStorage.setItem("name", "Kaiki");
+
+// localStorage.setItem("surname", "Senshougahara");
+// localStorage.setItem("oddity", "Crab");
+// localStorage.setItem("firstname", "Hitagi");
+
+// const firstname = localStorage.getItem("firstname");
+// console.log(firstname);
+// localStorage.removeItem("oddity");
+// localStorage.clear();
+
+// ------------------------- JSON.stringify & JSON.parse ------------------ //
+
+//JSON.stringify -------> convert to JSON string an object or array.
+const friends = { f1: "Hitagi", f2: "Nadeko", f3: "Tsubasa" };
+const friends2 = ["Koyomi", "Suruga", "Mayoi"];
+localStorage.setItem("Friends", JSON.stringify(friends));
+
+// JSON.parse ----> parse a JSON string to a original form (object or array, etc..)
+const values = JSON.parse(localStorage.getItem("Friends"));
+
+console.log(values.f3);
+
+let oddities;
+
+if (localStorage.getItem("oddities")) {
+  oddities = JSON.parse(localStorage.getItem("oddities"));
+} else {
+  oddities = [];
 }
 
-// btn.addEventListener("click", changeColors);
+console.log(oddities);
 
-btn.addEventListener("click", () => {
-  const myString = document.getElementById("tongueTwister");
+// oddities.push("Crab");
+oddities.push("Monkey");
 
-  let regEx = /na/gi;
-  let newString = myString.textContent.replace(regEx, "nya");
-  newString = newString.charAt(0).toUpperCase() + newString.slice(1);
-  console.log(newString);
-  myString.textContent = newString;
-});
+localStorage.setItem("oddities", JSON.stringify(oddities));
