@@ -166,8 +166,9 @@ main {
 .container {
   text-align: center;
 }
-#value {
-  font-size: 6rem;
+#computer-choice,
+#your-choice {
+  font-size: 2rem;
   font-weight: bold;
   text-transform: uppercase;
   text-align: center;
